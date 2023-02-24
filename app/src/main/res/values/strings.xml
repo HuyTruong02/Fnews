@@ -28,4 +28,11 @@
     <string name="welcome3_til">Chính xác và văn minh</string>
     <string name="welcome3_des">Thông tin kiểm duyệt rõ ràng,  tự do ngôn luận một cách văn minh - lịch sự</string>
     <string name="personal">Cá nhân</string>
+    <string name="saved">Xem sau</string>
+    <string name="seen">Đã xem</string>
+    <string name="like">Yêu thích</string>
+    <string name="my_comment">Bình luận của tôi</string>
+    <string name="email_linking">Liên kết email</string>
+    <string name="change_password_no_cap">Đổi mật khẩu</string>
+    <string name="sign_out">Đăng Xuất</string>
 </resources>
