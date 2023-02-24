@@ -4,4 +4,4 @@
     android:id="@+id/fragment_container_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:name="poly.duantotnghiep.view.profile.saved_news.SavedNewsFragment" />
+    android:name="poly.duantotnghiep.view.profile.seen_news.SeenNewsFragment" />

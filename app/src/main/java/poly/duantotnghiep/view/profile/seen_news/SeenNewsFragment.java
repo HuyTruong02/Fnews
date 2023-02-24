@@ -1,24 +1,22 @@
 package poly.duantotnghiep.view.profile.seen_news;
 
-import androidx.lifecycle.ViewModelProvider;
-
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import poly.duantotnghiep.R;
-import poly.duantotnghiep.databinding.FragmentSeenNewsBinding;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
-public class SeenNewsFragment extends Fragment {
+import poly.duantotnghiep.databinding.FragmentSeenNewsBinding;
+import poly.duantotnghiep.view.profile.NewsAdapter;
+
+public class SeenNewsFragment extends Fragment implements NewsAdapter.OnClickListener {
 
     private FragmentSeenNewsBinding binding;
-    private SeenNewsViewModel viewModel;
+    private NewsAdapter newsAdapter;
 
     public static SeenNewsFragment newInstance() {
         return new SeenNewsFragment();
@@ -34,16 +32,37 @@ public class SeenNewsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        setupSeenNewsRcv();
         setupViewModel();
     }
 
     private void setupViewModel() {
-        viewModel = new ViewModelProvider(this).get(SeenNewsViewModel.class);
+        SeenNewsViewModel viewModel = new ViewModelProvider(this).get(SeenNewsViewModel.class);
+        viewModel._seenList.observe(getViewLifecycleOwner(), news -> {
+            if (news != null) {
+                newsAdapter.submitList(news);
+            }
+        });
+    }
+
+    private void setupSeenNewsRcv() {
+        newsAdapter = new NewsAdapter(this);
+        binding.rcvSeenNews.setAdapter(newsAdapter);
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    @Override
+    public void onClickItem(String newsId) {
+
+    }
+
+    @Override
+    public void onClickShareItem(String newsId) {
+
     }
 }
