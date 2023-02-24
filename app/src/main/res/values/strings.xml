@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">Fnews</string>
+    <string name="sign_up">Đăng ký</string>
+    <string name="email">Email</string>
+    <string name="user_name">Tên đăng nhập</string>
+    <string name="password">Mật khẩu</string>
+    <string name="sign_up_cap">Đăng Ký</string>
+    <string name="policy">Để đăng ký bạn cần chấp nhận điều khoản của chúng tôi</string>
+    <string name="sign_in_with">Đăng nhập với</string>
+    <string name="have_not_account">Bạn chưa có tài khoản?</string>
+    <string name="for_get_password">Quên mật khẩu?</string>
+    <string name="sign_in">Đăng Nhập</string>
+    <string name="confirm">Xác Nhận</string>
+    <string name="enter_code">Nhập mã</string>
+    <string name="enter_email">Nhập email của bạn</string>
+    <string name="take_code">Lấy mã</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_password">Nhập mật khẩu mới</string>
+    <string name="confirm_new_password">Nhập lại mật khẩu mới</string>
+    <string name="change_password">Đổi Mật Khẩu</string>
+    <string name="skip">Bỏ qua</string>
+    <string name="next">Tiếp tục</string>
+    <string name="welcome1_til">Chào mừng đến Fnews.</string>
+    <string name="welcome1_des">Cung cấp các tin tức chính xác, thú vị và nhanh chóng về cuộc sống của Polyer.</string>
+    <string name="welcome2_til">Rõ ràng và nhanh chóng.</string>
+    <string name="welcome2_des">Phân các mục báo rõ ràng và tiếp cận nhanh chóng các bài báo quan tâm</string>
+    <string name="welcome3_til">Chính xác và văn minh</string>
+    <string name="welcome3_des">Thông tin kiểm duyệt rõ ràng,  tự do ngôn luận một cách văn minh - lịch sự</string>
+    <string name="personal">Cá nhân</string>
 </resources>
