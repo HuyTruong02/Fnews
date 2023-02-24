@@ -1,4 +1,4 @@
-package poly.duantotnghiep.auth.verify_account;
+package poly.duantotnghiep.view.auth.verify_account;
 
 import android.os.Bundle;
 

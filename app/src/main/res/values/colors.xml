@@ -8,4 +8,6 @@
     <color name="primary_dark">#F57C00</color>
     <color name="primary">#FF9800</color>
     <color name="primary_light">#FDC776</color>
+    <color name="dark">#494343</color>
+    <color name="light">#AAAAAA</color>
 </resources>

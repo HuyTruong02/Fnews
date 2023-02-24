@@ -1,4 +1,4 @@
-package poly.duantotnghiep.auth;
+package poly.duantotnghiep.view.auth;
 
 import androidx.appcompat.app.AppCompatActivity;
 

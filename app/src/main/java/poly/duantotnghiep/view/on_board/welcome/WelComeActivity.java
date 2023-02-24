@@ -1,6 +1,5 @@
-package poly.duantotnghiep.on_board.welcome;
+package poly.duantotnghiep.view.on_board.welcome;
 
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;

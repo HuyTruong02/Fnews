@@ -1,4 +1,4 @@
-package poly.duantotnghiep.profile;
+package poly.duantotnghiep.view.profile;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;

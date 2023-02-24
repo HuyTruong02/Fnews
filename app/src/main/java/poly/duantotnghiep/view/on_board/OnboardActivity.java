@@ -1,4 +1,4 @@
-package poly.duantotnghiep.on_board;
+package poly.duantotnghiep.view.on_board;
 
 import android.app.Activity;
 import android.os.Bundle;

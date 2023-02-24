@@ -1,4 +1,4 @@
-package poly.duantotnghiep.on_board.welcome;
+package poly.duantotnghiep.view.on_board.welcome;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
