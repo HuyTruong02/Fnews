@@ -6,8 +6,67 @@ import java.util.List;
 import poly.duantotnghiep.data.model.Comment;
 import poly.duantotnghiep.data.model.CommentAndNews;
 import poly.duantotnghiep.data.model.News;
+import poly.duantotnghiep.data.model.Notification;
 
 public class FakeDataComponent {
+
+    public static List<Notification> getNotificationList() {
+        List<Notification> notifications = new ArrayList<>();
+
+        Notification notification = new Notification(
+                "1",
+                "Bình luận : \"fsdif sdofh\" đã được phê duyệt",
+                System.currentTimeMillis(),
+                Notification.NotificationType.COMMENT_REQUEST,
+                "https://2.img-dpreview.com/files/p/E~C1000x0S4000x4000T1200x1200~articles/3925134721/0266554465.jpeg",
+                false
+        );
+
+        Notification notification1 = new Notification(
+                "1",
+                "Bình luận : \"fsdif sdofh\" đã được phê duyệt",
+                System.currentTimeMillis(),
+                Notification.NotificationType.TAG_COMMENT,
+                "https://2.img-dpreview.com/files/p/E~C1000x0S4000x4000T1200x1200~articles/3925134721/0266554465.jpeg",
+                false
+        );
+        Notification notification2 = new Notification(
+                "1",
+                "Bình luận : \"fsdif sdofh\" đã được phê duyệt",
+                System.currentTimeMillis(),
+                Notification.NotificationType.LIKED_COMMENT,
+                "https://2.img-dpreview.com/files/p/E~C1000x0S4000x4000T1200x1200~articles/3925134721/0266554465.jpeg",
+                false
+        );
+
+        Notification notification3 = new Notification(
+                "1",
+                "Bình luận : \"fsdif sdofh\" đã được phê duyệt",
+                System.currentTimeMillis(),
+                Notification.NotificationType.COMMENT_REQUEST,
+                "https://2.img-dpreview.com/files/p/E~C1000x0S4000x4000T1200x1200~articles/3925134721/0266554465.jpeg",
+                true
+        );
+
+        notifications.add(notification);
+        notifications.add(notification1);
+        notifications.add(notification2);
+        notifications.add(notification3);
+        notifications.add(notification);
+        notifications.add(notification1);
+        notifications.add(notification2);
+        notifications.add(notification3);
+        notifications.add(notification);
+        notifications.add(notification1);
+        notifications.add(notification2);
+        notifications.add(notification3);
+        notifications.add(notification);
+        notifications.add(notification1);
+        notifications.add(notification2);
+        notifications.add(notification3);
+
+        return notifications;
+    }
 
     public static List<CommentAndNews> getCommentAndNewsList() {
         List<CommentAndNews> list = new ArrayList<>();

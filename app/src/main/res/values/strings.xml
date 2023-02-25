@@ -45,4 +45,11 @@
     <string name="change_email">Đổi email</string>
     <string name="current_email">Email hiện tại:</string>
     <string name="new_email">Nhập email mới</string>
+    <string name="notification">Thông báo</string>
+    <string name="minute_time_format">%d phút trước</string>
+    <string name="hour_time_format">%d giờ trước</string>
+    <string name="day_time_format">%d ngày trước</string>
+    <string name="sample_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="delete_notify">Xóa thông báo này</string>
+    <string name="prevent_notify">Tắt thông báo cho bài viết này</string>
 </resources>
