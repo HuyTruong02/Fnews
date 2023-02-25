@@ -11,14 +11,14 @@ import poly.duantotnghiep.util.FakeNewsInProfileComponent;
 
 public class SeenNewsViewModel extends ViewModel {
     public SeenNewsViewModel() {
-        loadSeenList();
+        loadSeenNewsList();
     }
 
-    private final MutableLiveData<List<News>> seenList = new MutableLiveData<>();
-    public LiveData<List<News>> _seenList = seenList;
+    private final MutableLiveData<List<News>> seenNewsList = new MutableLiveData<>();
+    public LiveData<List<News>> _seenNewsList = seenNewsList;
 
-    public void loadSeenList() {
+    private void loadSeenNewsList() {
         List<News> newsList = FakeNewsInProfileComponent.getList();
-        seenList.setValue(newsList);
+        seenNewsList.setValue(newsList);
     }
 }

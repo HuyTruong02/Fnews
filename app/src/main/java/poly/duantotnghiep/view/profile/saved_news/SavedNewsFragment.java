@@ -34,7 +34,7 @@ public class SavedNewsFragment extends Fragment implements NewsAdapter.OnClickLi
 
     private void setupViewModel() {
         SavedNewsViewModel viewModel = new ViewModelProvider(this).get(SavedNewsViewModel.class);
-        viewModel._savedList.observe(getViewLifecycleOwner(), news -> {
+        viewModel._savedNewsList.observe(getViewLifecycleOwner(), news -> {
             if (news != null) {
                 newsAdapter.submitList(news);
             }

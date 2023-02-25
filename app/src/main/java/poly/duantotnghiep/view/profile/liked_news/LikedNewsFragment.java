@@ -1,55 +1,59 @@
-package poly.duantotnghiep.view.profile.seen_news;
+package poly.duantotnghiep.view.profile.liked_news;
+
+import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
-import poly.duantotnghiep.databinding.FragmentSeenNewsBinding;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import poly.duantotnghiep.R;
+import poly.duantotnghiep.databinding.FragmentLikedNewsBinding;
 import poly.duantotnghiep.view.profile.NewsAdapter;
+import poly.duantotnghiep.view.profile.saved_news.SavedNewsViewModel;
 
-public class SeenNewsFragment extends Fragment implements NewsAdapter.OnClickListener {
+public class LikedNewsFragment extends Fragment implements NewsAdapter.OnClickListener {
 
-    private FragmentSeenNewsBinding binding;
+    private FragmentLikedNewsBinding binding;
+
     private NewsAdapter newsAdapter;
 
-    public static SeenNewsFragment newInstance() {
-        return new SeenNewsFragment();
+    public static LikedNewsFragment newInstance() {
+        return new LikedNewsFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = FragmentSeenNewsBinding.inflate(inflater, container, false);
+        binding = FragmentLikedNewsBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        setupSeenNewsRcv();
+        setupLikedNewsRcv();
         setupViewModel();
     }
 
     private void setupViewModel() {
-        SeenNewsViewModel viewModel = new ViewModelProvider(this).get(SeenNewsViewModel.class);
-        viewModel._seenNewsList.observe(getViewLifecycleOwner(), news -> {
+        LikedNewsViewModel viewModel = new ViewModelProvider(this).get(LikedNewsViewModel.class);
+        viewModel._likedNewsList.observe(getViewLifecycleOwner(), news -> {
             if (news != null) {
                 newsAdapter.submitList(news);
             }
         });
     }
 
-    private void setupSeenNewsRcv() {
+    private void setupLikedNewsRcv() {
         newsAdapter = new NewsAdapter(this);
-        binding.rcvSeenNews.setAdapter(newsAdapter);
+        binding.rcvLikedNews.setAdapter(newsAdapter);
     }
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();

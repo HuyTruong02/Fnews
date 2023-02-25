@@ -12,14 +12,14 @@ import poly.duantotnghiep.util.FakeNewsInProfileComponent;
 public class SavedNewsViewModel extends ViewModel {
 
     public SavedNewsViewModel() {
-        loadSavedList();
+        loadSavedNewsList();
     }
 
-    private final MutableLiveData<List<News>> savedList = new MutableLiveData<>();
-    public LiveData<List<News>> _savedList = savedList;
+    private final MutableLiveData<List<News>> savedNewsList = new MutableLiveData<>();
+    public LiveData<List<News>> _savedNewsList = savedNewsList;
 
-    public void loadSavedList() {
+    private void loadSavedNewsList() {
         List<News> newsList = FakeNewsInProfileComponent.getList();
-        savedList.setValue(newsList);
+        savedNewsList.setValue(newsList);
     }
 }
