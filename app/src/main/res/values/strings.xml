@@ -39,4 +39,5 @@
     <string name="seen_news">Tin đã xem</string>
     <string name="saved_news">Tin đã lưu</string>
     <string name="liked_news">Tin đã thích</string>
+    <string name="current_password">Nhập mật khẩu hiện tại</string>
 </resources>

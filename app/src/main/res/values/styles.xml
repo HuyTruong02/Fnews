@@ -71,4 +71,9 @@
         <item name="android:ellipsize">end</item>
     </style>
 
+    <style name="AppPasswordEdittext">
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+
 </resources>
