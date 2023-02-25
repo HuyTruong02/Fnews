@@ -40,4 +40,9 @@
     <string name="saved_news">Tin đã lưu</string>
     <string name="liked_news">Tin đã thích</string>
     <string name="current_password">Nhập mật khẩu hiện tại</string>
+    <string name="verify_account">Xác nhận tài khoản</string>
+    <string name="verify">Xác nhận</string>
+    <string name="change_email">Đổi email</string>
+    <string name="current_email">Email hiện tại:</string>
+    <string name="new_email">Nhập email mới</string>
 </resources>
