@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel;
 import java.util.List;
 
 import poly.duantotnghiep.data.model.News;
-import poly.duantotnghiep.util.FakeNewsInProfileComponent;
+import poly.duantotnghiep.util.FakeDataComponent;
 
 public class SavedNewsViewModel extends ViewModel {
 
@@ -19,7 +19,7 @@ public class SavedNewsViewModel extends ViewModel {
     public LiveData<List<News>> _savedNewsList = savedNewsList;
 
     private void loadSavedNewsList() {
-        List<News> newsList = FakeNewsInProfileComponent.getList();
+        List<News> newsList = FakeDataComponent.getNewsList();
         savedNewsList.setValue(newsList);
     }
 }
