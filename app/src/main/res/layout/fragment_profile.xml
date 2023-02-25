@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.profile.ProfileFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="@string/personal"
+        app:titleCentered="true"
+        app:titleTextColor="@color/white" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imvAvatar"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_person"
+        app:civ_border_color="@color/primary"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        style="@style/AppLargeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/aclonica"
+        android:text="user_name"
+        app:layout_constraintEnd_toEndOf="@+id/imvAvatar"
+        app:layout_constraintStart_toStartOf="@+id/imvAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/imvAvatar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSaved"
+        style="@style/ProfileCardStyleLeft"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@id/cardSeen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUsername">
+
+        <Button
+            style="@style/ContentProfileCardStyle"
+            android:background="@color/primary"
+            android:drawableLeft="@drawable/img_saved"
+            android:text="@string/saved"
+            tools:ignore="RtlHardcoded" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSeen"
+        style="@style/ProfileCardStyleRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardSaved"
+        app:layout_constraintTop_toTopOf="@+id/cardSaved">
+
+        <Button
+            style="@style/ContentProfileCardStyle"
+            android:drawableLeft="@drawable/img_seen"
+            android:text="@string/seen"
+            tools:ignore="RtlHardcoded" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLike"
+        style="@style/ProfileCardStyleLeft"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@id/cardComment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardSaved">
+
+        <Button
+            style="@style/ContentProfileCardStyle"
+            android:background="@color/primary"
+            android:drawableLeft="@drawable/img_like"
+            android:text="@string/like"
+            tools:ignore="RtlHardcoded" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardComment"
+        style="@style/ProfileCardStyleRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardLike"
+        app:layout_constraintTop_toTopOf="@+id/cardLike">
+
+        <Button
+            style="@style/ContentProfileCardStyle"
+            android:drawableLeft="@drawable/img_comment"
+            android:text="@string/my_comment"
+            tools:ignore="RtlHardcoded" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardEmailLinking"
+        style="@style/ProfileCardStyleLeft"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@id/cardChangePasswd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardLike">
+
+        <Button
+            style="@style/ContentProfileCardStyle"
+            android:background="@color/primary"
+            android:drawableLeft="@drawable/img_email"
+            android:text="@string/email_linking"
+            tools:ignore="RtlHardcoded" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardChangePasswd"
+        style="@style/ProfileCardStyleRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardEmailLinking"
+        app:layout_constraintTop_toTopOf="@+id/cardEmailLinking">
+
+        <Button
+            style="@style/ContentProfileCardStyle"
+            android:drawableLeft="@drawable/img_change_password"
+            android:text="@string/change_password_no_cap"
+            tools:ignore="RtlHardcoded" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSignOut"
+        style="@style/ProfileCardStyleRight"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardEmailLinking"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/st_primary_button"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/img_sign_out" />
+
+            <TextView
+                style="@style/AppLargeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@string/sign_out"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
